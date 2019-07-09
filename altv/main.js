@@ -7,9 +7,43 @@
 var numeriProibiti = [];
 var numeriInseriti = [];
 
+var difficolta = parseInt(prompt("difficolta"));
+// if (difficolta == 0) {
+//   var range = 50;
+// }
+// else if (difficolta == 1) {
+//   var range = 80;
+// }
+// else{
+//   var range = 100;
+// }
+// console.log(range);
+
+
+
+switch (difficolta) {
+  case 0:
+    var range = 50;
+      break;
+  case 1:
+    var range = 80;
+      break;
+  case 2:
+    var range = 100;
+      break;
+  default:
+  var range = 10;
+
+}
+console.log(range)
+
+
+
+
+
 //creo ciclo for che popolera l array numeriProibiti
 for (var i = 1; i < 17; i++) {
-  var numeroCasuale = parseInt(Math.floor(Math.random()*(100))+1);
+  var numeroCasuale = parseInt(Math.floor(Math.random()*(range))+1);
   // console.log(numeroCasuale);
   numeriProibiti.push(numeroCasuale);
 }
